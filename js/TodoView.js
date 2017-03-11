@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded",function(event) {
     
-    var addTodoInput = document.querySelector("#todo-input"),
-        addTodoBtn = document.querySelector("#add-todo-btn");
+    var todos = [
+        new Todo('wynieść śmieci'),
+        new Todo('nakarmić psa'),
+        new Todo('pouczyc programowac')
+    ];
 
-    addTodoBtn.addEventListener('click', function(event){
-        var inputValue = addTodoInput.value;
-        alert(inputValue);
-    });
+    TodoRenderer.renderList(todos);
 });
 
